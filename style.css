@@ -1,9 +1,80 @@
-header{
-    width: 100%;
+header {
+  width: 100%;
 }
-.header{
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 100px;
+}
+.sections {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+}
+.section {
+  color: #303136;
+  padding: 25px 9px;
+    transition: all 0.3s ease;
+
+}
+.section:hover,
+.section:focus {
+  background-color: #000a3e;
+  color: #f4f4f5;
+}
+/* Styling for the mobile menu button */
+.menu-button {
+  display: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  background-color: transparent;
+  border: none;
+}
+
+/* Styling for the mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f1f1f1;
+  transition: left 0.3s ease-out;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.mobile-menu .section {
+  margin-bottom: 10px;
+}
+
+/* Media query for mobile adaptation */
+@media (max-width: 768px) {
+  .sections {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .mobile-menu {
     display: flex;
+    flex-direction: column;;
+  }
 }
+
 /* The switch - the box around the slider */
 .switch {
   display: block;
@@ -34,22 +105,21 @@ header{
   right: 0;
   bottom: 0;
   background-color: #f4f4f5;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 30px;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: var(--size-of-icon,1.4em);
-  width: var(--size-of-icon,1.4em);
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
   border-radius: 20px;
-  left: var(--slider-offset,0.3em);
+  left: var(--slider-offset, 0.3em);
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-  ;
- transition: .4s;
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -57,7 +127,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
   background: #303136;
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
