@@ -51,21 +51,22 @@ a {
 
 /*-------------Hero------------------*/
 .hero {
-  background-image: url(/img/truck1.jpg);
-  max-width: 1323px;
-  min-height: 920px;
+  background-image: url(/img/hero-truck.jpg);
 }
-.hero-content{
+.hero-content {
   padding: 20px;
+  padding-bottom: 454.48px;
 }
 .hero-title {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 900;
-}
-.hero-text{
-    font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 200;
+  font-size: 44px;
+  margin-top: 100px;
   font-style: italic;
+}
+.hero-text {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
 }
 /* Styling for the mobile menu button */
 .menu-button {
@@ -93,7 +94,15 @@ a {
 .mobile-menu.active {
   left: 0;
 }
-
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .mobile-menu .section {
   margin-bottom: 10px;
 }
@@ -101,6 +110,12 @@ a {
 /* Media query for mobile adaptation */
 @media (max-width: 768px) {
   .sections {
+    display: none;
+  }
+  nav{
+    display: none;
+  }
+  .section{
     display: none;
   }
 
