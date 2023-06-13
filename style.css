@@ -5,31 +5,19 @@ header {
 a {
   text-decoration: none;
 }
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+}
 .container {
   margin: 0 auto;
   padding: 0 20px;
 }
 
-@media screen and (min-width: 320px) {
-  .container {
-    max-width: 320px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
 }
 .logo {
   width: 100px;
@@ -51,23 +39,103 @@ a {
 
 /*-------------Hero------------------*/
 .hero {
-  background-image: url(/img/hero-truck.jpg);
+  background-image: url(/img/Img_Overlay.png), url(/img/hero-truck.jpg);
 }
 .hero-content {
   padding: 20px;
   padding-bottom: 454.48px;
+  color: white;
 }
 .hero-title {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 900;
   font-size: 44px;
   margin-top: 100px;
-  font-style: italic;
 }
 .hero-text {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 400;
 }
+
+/*------------------Section 1-------------------------*/
+.section1 {
+  display: flex;
+  flex-direction: column;
+}
+.par1-sec1 {
+  margin-bottom: 0;
+  display: flex;
+}
+.pars-sec1 {
+  font-size: large;
+}
+.section1-title {
+  padding-top: 90px;
+  padding-bottom: 50px;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
+.section1-title span {
+  margin-right: 10px; /* Adjust the value as needed */
+}
+.underline {
+  text-decoration: underline;
+}
+.btn {
+  font-size: 17px;
+  background: transparent;
+  width: 130px;
+  padding: 7px 25px;
+  color: #303136;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #000a3e;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: white;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #000a3e;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+/*------------------Section 2-------------------------*/
+
 /* Styling for the mobile menu button */
 .menu-button {
   display: none;
@@ -105,28 +173,6 @@ a {
 }
 .mobile-menu .section {
   margin-bottom: 10px;
-}
-
-/* Media query for mobile adaptation */
-@media (max-width: 768px) {
-  .sections {
-    display: none;
-  }
-  nav{
-    display: none;
-  }
-  .section{
-    display: none;
-  }
-
-  .menu-button {
-    display: block;
-  }
-
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 /* The switch - the box around the slider */
@@ -185,4 +231,20 @@ input:checked + .slider:before {
   background: #303136;
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
 }
