@@ -61,6 +61,7 @@ body {
 .section1 {
   display: flex;
   flex-direction: column;
+  padding-bottom: 90px;
 }
 .par1-sec1 {
   margin-bottom: 0;
@@ -135,7 +136,55 @@ body {
   color: aliceblue;
 }
 /*------------------Section 2-------------------------*/
+.section2 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #f5f4fa;
+  display: flex;
+  justify-content: space-around;
+}
+.content-sec2 {
+  transition: all 0.8s ease;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.content-sec2:hover{
+  padding-left: 0px;
+  padding-top: 0px;
+}
+.sec2-element1 {
+  height: 340px;
+  width: 400px;
+  text-align: left;
+  background-image: url(/img/Img_Overlay.png), url(/img/sec2-elm1.jpg);
+  transition: all 0.8s ease;
+}
 
+.elem1-title {
+  padding-bottom: 90px;
+  padding-left: 30px;
+  padding-top: 60px;
+  margin: 0%;
+  font-size: xx-large;
+  color: white;
+}
+
+.elem-btn {
+  margin-left: 30px;
+  padding: 15px 20px;
+  font-family: "Montserrat Alternates", sans-serif;
+  background-color: transparent;
+  border-color: white;
+  border: solid white;
+  color: white;
+  cursor: pointer;
+}
+.sec2-element2 {
+  height: 340px;
+  width: 400px;
+  text-align: left;
+  background-image: url(/img/Img_Overlay.png), url(/img/question.jpg);
+}
 /* Styling for the mobile menu button */
 .menu-button {
   display: none;
