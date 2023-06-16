@@ -2,17 +2,37 @@ header {
   width: 100%;
   padding: 5px;
 }
+.curent-page {
+  background-color: #000a3e;
+  color: #f4f4f5;
+  padding: 25px 9px;
+}
 a {
   text-decoration: none;
 }
 body {
   font-family: "Montserrat Alternates", sans-serif;
+  color: #000a3e;
 }
 .container {
   margin: 0 auto;
   padding: 0 20px;
 }
-
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+}
+.contact {
+  color: white;
+  transition: 0.5s ease;
+}
+.contact:hover {
+  color: #31d0aa;
+}
+li {
+  text-decoration: none;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -36,7 +56,17 @@ body {
   background-color: #000a3e;
   color: #f4f4f5;
 }
-
+.footer {
+  color: white;
+  background-color: #000a3e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-text {
+  width: 400px;
+  margin: 0;
+}
 /*-------------Hero------------------*/
 .hero {
   background-image: url(/img/Img_Overlay.png), url(/img/hero-truck.jpg);
@@ -148,7 +178,7 @@ body {
   padding-left: 20px;
   padding-top: 10px;
 }
-.content-sec2:hover{
+.content-sec2:hover {
   padding-left: 0px;
   padding-top: 0px;
 }
@@ -184,6 +214,33 @@ body {
   width: 400px;
   text-align: left;
   background-image: url(/img/Img_Overlay.png), url(/img/question.jpg);
+}
+/*-----------------Section 3----------------------*/
+.section3 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+.sec3-tit {
+  font-size: xxx-large;
+}
+.sec3-tit2 {
+  font-size: x-large;
+}
+.time-sec {
+  display: flex;
+}
+.sec3-elm1 {
+  width: 1500px;
+}
+.text {
+  width: fit-content;
+}
+.time {
+  display: flex;
+}
+.sec3-elm2 {
+  margin-left: 20px;
 }
 /* Styling for the mobile menu button */
 .menu-button {
