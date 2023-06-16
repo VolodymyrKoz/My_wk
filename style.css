@@ -69,7 +69,7 @@ li {
 }
 /*-------------Hero------------------*/
 .hero {
-  background-image: url(/img/Img_Overlay.png), url(/img/hero-truck.jpg);
+  background-image: url(./img/Img_Overlay.png), url(./img/hero-truck.jpg);
 }
 .hero-content {
   padding: 20px;
@@ -186,7 +186,7 @@ li {
   height: 340px;
   width: 400px;
   text-align: left;
-  background-image: url(/img/Img_Overlay.png), url(/img/sec2-elm1.jpg);
+  background-image: url(./img/Img_Overlay.png), url(./img/sec2-elm1.jpg);
   transition: all 0.8s ease;
 }
 
@@ -213,7 +213,7 @@ li {
   height: 340px;
   width: 400px;
   text-align: left;
-  background-image: url(/img/Img_Overlay.png), url(/img/question.jpg);
+  background-image: url(./img/Img_Overlay.png), url(./img/question.jpg);
 }
 /*-----------------Section 3----------------------*/
 .section3 {
