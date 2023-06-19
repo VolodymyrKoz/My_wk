@@ -23,3 +23,5 @@ setInterval(updateClock, 1000);
 
 // Initial update
 updateClock();
+
+  AOS.init();

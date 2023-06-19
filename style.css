@@ -208,6 +208,12 @@ li {
   border: solid white;
   color: white;
   cursor: pointer;
+  transition: all 0.8s ease;
+}
+.elem-btn:hover,
+.elem-btn:focus {
+  color: #000a3e;
+  background-color: white;
 }
 .sec2-element2 {
   height: 340px;
@@ -242,43 +248,15 @@ li {
 .sec3-elm2 {
   margin-left: 20px;
 }
-/* Styling for the mobile menu button */
-.menu-button {
-  display: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: #333;
-  background-color: transparent;
-  border: none;
+.clock:hover {
+  box-shadow: #000a3e;
 }
+svg {
+  transition: all 0.5s ease;
 
-/* Styling for the mobile menu */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: -350px;
-  width: 250px;
-  height: 100vh;
-  padding: 20px;
-  background-color: #f1f1f1;
-  transition: left 0.3s ease-out;
-}
-
-.mobile-menu.active {
-  left: 0;
-}
-#closeBtn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.mobile-menu .section {
-  margin-bottom: 10px;
+  &:hover {
+    filter: drop-shadow(8px 5px 3px rgba(0, 0, 0, 0.5));
+  }
 }
 
 /* The switch - the box around the slider */
@@ -343,14 +321,28 @@ input:checked + .slider:before {
     max-width: 320px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279.5px) {
+  .hero {
+    background-image: url(./img/Img_Overlay.png),
+      url(./img/hero-truck-tablet.jpg);
+  }
+  .section1-title {
+    font-size: x-large;
+  }
+  .hero-content {
+    padding-bottom: 420px;
+  }
   .container {
     max-width: 768px;
     padding: 0 32px;
   }
 }
-@media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
+
+@media screen and (max-width: 768px) {
+
 }
