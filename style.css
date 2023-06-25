@@ -71,6 +71,9 @@ li {
 .hero {
   background-image: url(./img/Img_Overlay.png), url(./img/hero-truck.jpg);
 }
+.hero-about {
+  background-image: url(./img/Img_Overlay.png), url(./img/about-hero.jpg);
+}
 .hero-content {
   padding: 20px;
   padding-bottom: 454.48px;
@@ -344,5 +347,4 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 768px) {
-
 }
