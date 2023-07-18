@@ -5,6 +5,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "express": "^4.17.1"
   }
 }

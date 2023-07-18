@@ -319,6 +319,18 @@ input:checked + .slider:before {
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
+
+/*About sec*/
+.missions{
+  text-align: center;
+}
+.history{
+  text-align: center;
+}
+.section1-about{
+  display: flex;
+}
+/*About sec*/
 @media screen and (min-width: 320px) {
   .container {
     max-width: 320px;
