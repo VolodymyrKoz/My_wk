@@ -372,16 +372,6 @@ input:checked + .slider:before {
   margin-top: -10px;
 }
 
-.photo .glow{
-  display: block;
-  width: 40%;
-  height: 200%;
-  background: rgba(255,255,255,.2);
-  top: 0;
-  filter: blur(5px);
-  transform: rotate(45deg) translate(-450%, 0);
-  transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
 
 .photo:hover img,
 .photo:hover .glow-wrap{
@@ -405,6 +395,46 @@ input:checked + .slider:before {
 #author:hover{
   color: #111;
 }
+    .values {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .values h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .values p {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .values ul {
+      list-style-type: disc;
+      color: #444;
+      font-size: 16px;
+      padding-left: 20px;
+      margin-left: 20px;
+    }
+
+    .values li {
+      margin-bottom: 10px;
+      transition: all 0.3s;
+    }
+
+    /* Optional: Add hover effect to list items */
+    .values li:hover {
+      color: #000a3e;
+      font-size: 20px;
+    }
 /*About sec*/
 @media screen and (min-width: 320px) {
   .container {
