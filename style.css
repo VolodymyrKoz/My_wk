@@ -97,7 +97,7 @@ li {
   border-radius: 20px;
 }
 .hero-contact{
-  background-image: url(./img/Img_Overlay.png), url(./img/truck-contact.jpg);
+  background-image: url(./img/Img_Overlay.png), url(/img/truck-contact.jpg);
   border-radius: 20px;
 }
 
