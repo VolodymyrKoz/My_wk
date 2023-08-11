@@ -576,7 +576,7 @@ button[type="submit"] {
   transition: all 0.3s;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
   background-color: #31d0aa;
   color: #000a3e;
 }
