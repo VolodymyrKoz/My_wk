@@ -6,6 +6,7 @@ header {
   background-color: #000a3e;
   color: #f4f4f5;
   padding: 25px 9px;
+  border-radius: 5px;
 }
 a {
   text-decoration: none;
@@ -41,6 +42,11 @@ li {
 }
 .logo {
   width: 100px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    filter: drop-shadow(8px 5px 3px rgba(0, 0, 0, 0.5));
+  }
 }
 .sections {
   font-family: "Montserrat Alternates", sans-serif;
@@ -53,6 +59,7 @@ li {
 }
 .section:hover,
 .section:focus {
+  border-radius: 5px;
   background-color: #000a3e;
   color: #f4f4f5;
 }
@@ -68,6 +75,14 @@ li {
   width: 400px;
   margin: 0;
 }
+.footer-logo {
+  width: 100px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    filter: drop-shadow(8px 5px 3px rgba(255, 255, 255, 0.5));
+  }
+}
 /*-------------Hero------------------*/
 .hero {
   background-image: url(./img/Img_Overlay.png), url(./img/hero-truck.jpg);
@@ -78,7 +93,7 @@ li {
   border-radius: 20px;
 }
 .hero-transp {
-  background-image: url(./img/Img_Overlay.png), url(./img/hero-transport.png);
+  background-image: url(./img/Img_Overlay.png), url(./img/hero-transport.jpg);
   border-radius: 20px;
 }
 
@@ -120,7 +135,7 @@ li {
 .section1-title {
   padding-top: 20px;
   margin-top: 70px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   margin: 0%;
   display: flex;
   justify-content: center;
@@ -511,6 +526,61 @@ input:checked + .slider:before {
   font-size: 20px;
 }
 /*About sec*/
+
+.section1 ul {
+  list-style-type: disc;
+  color: #444;
+  font-size: 16px;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+.section1 li {
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+/* Optional: Add hover effect to list items */
+.section1 li:hover {
+  color: #000a3e;
+  font-size: 20px;
+}
+.transp-tit {
+  text-align: center !important ;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+textarea {
+  resize: vertical;
+}
+input[type="submit"] {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form {
+  margin-bottom: 30px;
+}
+input,
+textarea {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
 @media screen and (min-width: 320px) {
   .container {
     max-width: 320px;
