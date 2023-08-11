@@ -552,7 +552,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  width: 100%;
+  width: 99%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -561,20 +561,26 @@ textarea {
 textarea {
   resize: vertical;
 }
+
 input[type="submit"] {
-  background-color: #007bff;
+  background-color: #000a3e;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 20px 40px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s;
 }
+
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #31d0aa;
+  color: #000a3e;
 }
 
 .form {
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 }
 input,
 textarea {
