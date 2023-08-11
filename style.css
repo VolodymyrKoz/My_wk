@@ -96,7 +96,7 @@ li {
   background-image: url(./img/Img_Overlay.png), url(./img/hero-transport.jpg);
   border-radius: 20px;
 }
-.hero-contact{
+.hero-contact {
   background-image: url(./img/Img_Overlay.png), url(./img/truck-contact.jpg);
   border-radius: 20px;
 }
@@ -605,6 +605,14 @@ textarea {
   .hero {
     background-image: url(./img/Img_Overlay.png),
       url(./img/hero-truck-tablet.jpg);
+  }
+  .hero-about {
+    background-image: url(./img/Img_Overlay.png), url(./img/tablet-hero.jpg);
+    border-radius: 20px;
+  }
+  .hero-transp {
+    background-image: url(./img/Img_Overlay.png), url(./img/truck-her0-tablet-transportation.jpg);
+    border-radius: 20px;
   }
   .section1-title {
     font-size: x-large;
