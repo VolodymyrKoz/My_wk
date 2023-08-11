@@ -590,28 +590,62 @@ input,
 textarea {
   font-family: "Montserrat Alternates", sans-serif;
 }
-
-@media screen and (min-width: 320px) {
-  .container {
-    max-width: 320px;
-  }
+/* Add this CSS to your existing styles */
+.mobile-menu {
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
+
+.mobile-menu a {
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
   }
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: none;
+  }
+  .menu-button {
+    display: none;
+  }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1279.5px) {
   .hero {
     background-image: url(./img/Img_Overlay.png),
       url(./img/hero-truck-tablet.jpg);
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: none;
+  }
+  .menu-button {
+    display: none;
   }
   .hero-about {
     background-image: url(./img/Img_Overlay.png), url(./img/tablet-hero.jpg);
     border-radius: 20px;
   }
   .hero-transp {
-    background-image: url(./img/Img_Overlay.png), url(./img/truck-her0-tablet-transportation.jpg);
+    background-image: url(./img/Img_Overlay.png),
+      url(./img/truck-her0-tablet-transportation.jpg);
     border-radius: 20px;
   }
   .section1-title {
@@ -626,5 +660,64 @@ textarea {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .sections {
+    display: none;
+  }
+  .container {
+    padding: 10px;
+  }
+
+  .menu-button {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px auto;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-menu-toggle:checked + .mobile-menu {
+    display: block;
+    border-radius: 20px;
+    max-width: 92.8%;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .menu-text {
+    font-size: 14px;
+    margin-left: 5px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-menu input {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: none;
+  }
+  .curent-page {
+    color: white;
+  }
+  .logo {
+    width: 60px;
+  }
 }

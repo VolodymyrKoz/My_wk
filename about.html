@@ -9,8 +9,7 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body class="container">
     <header class="header">
@@ -23,8 +22,24 @@
         <a class="section" href="transportation.html">Transportation</a>
         <a class="section" href="contact.html">Contact</a>
       </nav>
+      <!-- Add this code within the <header> element -->
+      <label class="menu-button" for="mobile-menu-toggle">
+  <span class="menu-text">Menu</span>
+      </label>
+      <input
+        type="checkbox"
+        id="mobile-menu-toggle"
+        class="mobile-menu-toggle"
+      />
+
+      <nav class="mobile-menu">
+        <a class="section" href="index.html">Home</a>
+        <a class="curent-page" href="about.html">About</a>
+        <a class="section" href="transportation.html">Transportation</a>
+        <a class="section" href="contact.html">Contact</a>
+      </nav>
       <label class="switch">
-        <input type="checkbox"/>
+        <input type="checkbox" />
         <span class="slider"></span>
       </label>
     </header>
