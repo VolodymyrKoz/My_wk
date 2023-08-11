@@ -59,6 +59,7 @@ li {
 .footer {
   color: white;
   background-color: #000a3e;
+  border-radius: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -70,12 +71,20 @@ li {
 /*-------------Hero------------------*/
 .hero {
   background-image: url(./img/Img_Overlay.png), url(./img/hero-truck.jpg);
+  border-radius: 20px;
 }
 .hero-about {
   background-image: url(./img/Img_Overlay.png), url(./img/about-hero.jpg);
+  border-radius: 20px;
 }
+.hero-transp {
+  background-image: url(./img/Img_Overlay.png), url(./img/hero-transport.png);
+  border-radius: 20px;
+}
+
 .hero-content {
   padding: 20px;
+  margin-bottom: 70px;
   padding-bottom: 454.48px;
   color: white;
 }
@@ -94,7 +103,12 @@ li {
 .section1 {
   display: flex;
   flex-direction: column;
-  padding-bottom: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 70px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
 }
 .par1-sec1 {
   margin-bottom: 0;
@@ -104,7 +118,8 @@ li {
   font-size: large;
 }
 .section1-title {
-  padding-top: 90px;
+  padding-top: 20px;
+  margin-top: 70px;
   padding-bottom: 50px;
   margin: 0%;
   display: flex;
@@ -122,7 +137,7 @@ li {
   background: transparent;
   width: 130px;
   padding: 7px 25px;
-  color: #303136;
+  color: #000a3e;
   text-transform: uppercase;
   position: relative;
   transition: 0.5s ease;
@@ -174,6 +189,9 @@ li {
   padding-bottom: 60px;
   background: #f5f4fa;
   display: flex;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
   justify-content: space-around;
 }
 .content-sec2 {
@@ -320,7 +338,7 @@ input:checked + .slider:before {
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
-/*About sec*/
+/*About sec
 .missions{
   text-align: center;
 }
@@ -379,7 +397,7 @@ input:checked + .slider:before {
 }
 
 
-/* Ends */
+/* Ends 
 
 #author{
   font-family: Helvetica, Arial;
@@ -394,47 +412,104 @@ input:checked + .slider:before {
 
 #author:hover{
   color: #111;
+}/**/
+
+.section1-about {
+  background-color: #f4f4f4;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-    .values {
-      background-color: #f4f4f4;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      margin: 20px auto;
-      width: 80%;
-      max-width: 800px;
-    }
 
-    .values h2 {
-      color: #333;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+.section1-about h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-    .values p {
-      color: #666;
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
+.section1-about p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
 
-    .values ul {
-      list-style-type: disc;
-      color: #444;
-      font-size: 16px;
-      padding-left: 20px;
-      margin-left: 20px;
-    }
+.team {
+  background-color: #fff;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
 
-    .values li {
-      margin-bottom: 10px;
-      transition: all 0.3s;
-    }
+.ceo {
+  flex: 1;
+  margin-right: 20px;
+}
 
-    /* Optional: Add hover effect to list items */
-    .values li:hover {
-      color: #000a3e;
-      font-size: 20px;
-    }
+.ceo-content {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ceo h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.img {
+  max-width: 35%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.values {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.values h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.values p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.values ul {
+  list-style-type: disc;
+  color: #444;
+  font-size: 16px;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+.values li {
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+/* Optional: Add hover effect to list items */
+.values li:hover {
+  color: #000a3e;
+  font-size: 20px;
+}
 /*About sec*/
 @media screen and (min-width: 320px) {
   .container {
