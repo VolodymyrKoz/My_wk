@@ -556,7 +556,6 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  width: 99%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -601,8 +600,17 @@ textarea {
   padding: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  transition: max-height 0.3s ease-in-out; /* Add this line for the animation */
+  max-height: 0; /* Add this line to initially hide the menu */
+  overflow: hidden;
 }
-
+.elem-btn a {
+  color: white;
+}
+.elem-btn a:hover,
+.elem-btn a:focus {
+  color: #000a3e;
+}
 .mobile-menu a {
   display: flex;
   flex-direction: column;
@@ -695,8 +703,10 @@ textarea {
     flex-direction: column;
     justify-content: center;
     border-radius: 20px;
-    max-width: 93.2%;
+    margin-right: 10px;
+    max-width: -webkit-fill-available;
     animation: slideDown 0.3s ease-in-out;
+    max-height: 500px;
   }
 
   @keyframes slideDown {
@@ -740,9 +750,11 @@ textarea {
   .sec2-element1 {
     margin-bottom: 20px;
     width: 95%;
+    max-width: 400px;
   }
   .sec2-element2 {
     width: 95%;
+    max-width: 400px;
   }
   .elem1-title {
     padding-left: 10px;
@@ -760,5 +772,17 @@ textarea {
   .footer-text {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .team {
+    flex-direction: column;
+  }
+  .img {
+    max-width: 70%;
+  }
+  .hero-title {
+    font-size: 38px;
+  }
+  .footer-logo {
+    padding-top: 10px;
   }
 }
