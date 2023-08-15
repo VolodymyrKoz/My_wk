@@ -27,21 +27,65 @@ if (window.location.pathname.endsWith("index.html")) {
   updateClock();
 }
 
+// const themeSwitch = document.getElementById("themeSwitch");
+
+// // Check if a theme preference is already set
+// if (localStorage.getItem("theme") === "dark") {
+//   document.body.classList.add("dark-theme");
+
+//   themeSwitch.checked = true;
+// }
+// // Listen for the theme switch change event
+// themeSwitch.addEventListener("change", () => {
+//   if (themeSwitch.checked) {
+//     document.body.classList.add("dark-theme");
+//     localStorage.setItem("theme", "dark");
+//   } else {
+//     document.body.classList.remove("dark-theme");
+//     localStorage.setItem("theme", "light");
+//   }
+// });
+
+// const logoImage = document.getElementById("logoImage");
+
+// // Check if a theme preference is already set
+// if (localStorage.getItem("theme") === "dark") {
+//   logoImage.src = "./img/logo-dark.png";
+// }
+
+// // Listen for the theme switch change event
+// themeSwitch.addEventListener("change", () => {
+//   if (themeSwitch.checked) {
+//     logoImage.src = "./img/logo-dark.png";
+//   } else {
+//     logoImage.src = "./img/logo.png";
+//   }
+// });
+
+// index.js
 const themeSwitch = document.getElementById("themeSwitch");
+const logoImage = document.getElementById("logoImage");
 
 // Check if a theme preference is already set
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark-theme");
-
+  logoImage.src = "./img/logo-dark.png"; // Change logo image
   themeSwitch.checked = true;
 }
+
 // Listen for the theme switch change event
 themeSwitch.addEventListener("change", () => {
   if (themeSwitch.checked) {
     document.body.classList.add("dark-theme");
+    logoImage.src = "./img/logo-dark.png"; // Change logo image
     localStorage.setItem("theme", "dark");
   } else {
     document.body.classList.remove("dark-theme");
+    logoImage.src = "./img/logo.png"; // Revert to original logo image
     localStorage.setItem("theme", "light");
   }
 });
+
+
+
+
