@@ -40,12 +40,14 @@ body.dark-theme button[type="submit"]:hover {
   color: white;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
-body.dark-theme input,
-textarea {
+body.dark-theme {
   color: white;
 }
 textarea {
   color: black;
+}
+body.dark-theme textarea {
+  color: white;
 }
 body.dark-theme {
   background-color: #000a3e;
