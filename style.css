@@ -2,12 +2,59 @@ header {
   width: 100%;
   padding: 5px;
 }
+body.dark-theme {
+  background-color: #000a3e;
+  color: white;
+}
+body.dark-theme #clock {
+  color: white;
+}
 .curent-page {
   background-color: #000a3e;
   color: #f4f4f5;
   padding: 25px 9px;
   border-radius: 5px;
 }
+body.dark-theme .clock {
+  color: white;
+}
+
+body.dark-theme .clock circle,
+body.dark-theme .clock line,
+body.dark-theme .clock polygon,
+body.dark-theme .clock path {
+  fill: none;
+}
+
+body.dark-theme .clock circle[fill] {
+  fill: white;
+}
+body.dark-theme svg path {
+  fill: #ffffff;
+}
+body.dark-theme .footer {
+  background-color: #000000;
+}
+
+body.dark-theme .section2 {
+  background-color: #141345;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+body.dark-theme .section1 {
+  background-color: #141345;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-theme .btn a{
+  color: white;
+}
+body.dark-theme .btn::before{
+  background-color: white;
+}
+body.dark-theme .btn::after{
+  background-color: white;
+}
+
 a {
   text-decoration: none;
 }
@@ -284,6 +331,9 @@ li {
 }
 .time {
   display: flex;
+}
+.clock {
+  color: #000a3e;
 }
 .sec3-elm2 {
   margin-left: 20px;
@@ -621,6 +671,7 @@ textarea {
 
 .btn a {
   color: #000a3e;
+  transition: 0.5s ease;
 }
 .btn a:hover {
   color: white;
@@ -751,10 +802,12 @@ textarea {
     margin-bottom: 20px;
     width: 95%;
     max-width: 400px;
+    border-radius: 10px;
   }
   .sec2-element2 {
     width: 95%;
     max-width: 400px;
+    border-radius: 10px;
   }
   .elem1-title {
     padding-left: 10px;
@@ -784,5 +837,20 @@ textarea {
   }
   .footer-logo {
     padding-top: 10px;
+  }
+  .hero-transp {
+    background-image: url(./img/Img_Overlay.png), url(./img/mobile-hero.jpg);
+  }
+  .hero-about {
+    background-image: url(./img/Img_Overlay.png), url(./img/about-mobile.jpg);
+  }
+  .hero {
+    background-image: url(./img/Img_Overlay.png), url(./img/mobile-home.jpg);
+  }
+  .hero-contact {
+    background-image: url(./img/Img_Overlay.png), url(./img/mobile-contact.jpg);
+  }
+  .hero-content {
+    padding-bottom: 370px;
   }
 }
