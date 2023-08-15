@@ -2,6 +2,26 @@ header {
   width: 100%;
   padding: 5px;
 }
+body {
+  transition: all 0.5s ease;
+}
+body.dark-theme .logo {
+  &:hover {
+    filter: drop-shadow(8px 5px 3px rgba(255, 255, 255, 0.5));
+  }
+}
+body.dark-theme button[type="submit"] {
+  background-color: #31d0aa;
+  color: #000a3e;
+}
+body.dark-theme button[type="submit"]:hover {
+  background-color: #141345;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+body.dark-theme input, textarea{
+  color: white;
+}
 body.dark-theme {
   background-color: #000a3e;
   color: white;
@@ -80,25 +100,40 @@ body.dark-theme .values p {
 body.dark-theme .values li {
   color: white;
 }
-body.dark-theme .btn a{
+body.dark-theme .btn a {
   color: white;
 }
-body.dark-theme .btn::before{
+body.dark-theme .btn::before {
   background-color: white;
 }
-body.dark-theme .btn::after{
+body.dark-theme .btn::after {
   background-color: white;
 }
-body.dark-theme .curent-page{
+body.dark-theme .curent-page {
   background-color: white;
   color: #141345;
 }
-body.dark-theme .section{
+body.dark-theme .section {
   color: white;
 }
-body.dark-theme .section:hover{
+body.dark-theme .section:hover {
   color: #000a3e;
   background-color: white;
+}
+body.dark-theme .mobile-menu {
+  background-color: #000a3e;
+}
+body.dark-theme input {
+  background-color: #000000;
+}
+body.dark-theme textarea {
+  background-color: #000000;
+}
+body.dark-theme .section1 li:hover {
+  color: white;
+}
+body.dark-theme .section1 li {
+  color: white;
 }
 a {
   text-decoration: none;
