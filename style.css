@@ -10,6 +10,27 @@ body.dark-theme .logo {
     filter: drop-shadow(8px 5px 3px rgba(255, 255, 255, 0.5));
   }
 }
+.scroll-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+body.dark-theme .scroll-button:hover {
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+.scroll-button {
+  background-color: #0400db;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 13px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.scroll-button:hover {
+    box-shadow: 0px 0px 10px rgb(0 0 0);
+  }
+
 body.dark-theme button[type="submit"] {
   background-color: #31d0aa;
   color: #000a3e;
@@ -19,7 +40,8 @@ body.dark-theme button[type="submit"]:hover {
   color: white;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
-body.dark-theme input, textarea{
+body.dark-theme input,
+textarea {
   color: white;
 }
 body.dark-theme {

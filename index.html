@@ -12,6 +12,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body class="container">
+    <div class="scroll-button-container">
+      <button id="scrollButton" class="scroll-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          fill="currentColor"
+          class="bi bi-arrow-up-circle"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+          />
+        </svg>
+      </button>
+    </div>
     <header class="header">
       <a href="index.html"
         ><img class="logo" id="logoImage" src="./img/logo.png" alt="Logo"
@@ -24,7 +41,7 @@
       </nav>
       <!-- Add this code within the <header> element -->
       <label class="menu-button" for="mobile-menu-toggle">
-  <span class="menu-text">Menu</span>
+        <span class="menu-text">Menu</span>
       </label>
       <input
         type="checkbox"
@@ -87,13 +104,15 @@
           industry-leading low shipping rates.
         </p>
       </div>
-      <button class="btn"> <a href="contact.html">Order Service</a></button>
+      <button class="btn"><a href="contact.html">Order Service</a></button>
     </section>
     <section class="section2">
       <div class="sec2-element1">
         <div class="content-sec2">
           <h3 class="elem1-title">Transportation</h3>
-          <button class="elem-btn"> <a href="transportation.html">Read More</a></button>
+          <button class="elem-btn">
+            <a href="transportation.html">Read More</a>
+          </button>
         </div>
       </div>
       <div class="sec2-element2">
@@ -119,12 +138,12 @@
       <div class="sec3-elm2">
         <div class="time">
           <svg
-            class="clock"          
+            class="clock"
             id="clock"
             viewBox="0 0 100 100"
             xmlns="http://www.w3.org/2000/svg"
             style="width: 70px; color: #000a3e; margin-right: 10px"
-            >
+          >
             <circle
               cx="50"
               cy="50"
@@ -181,7 +200,7 @@
 
             <!-- Center dot -->
             <circle cx="50" cy="50" r="2" fill="black" />
-        </svg>
+          </svg>
           <div class="text">
             <h3 class="sec3-tit2">Timely delivery is guaranteed</h3>
             <p>
@@ -192,7 +211,7 @@
         </div>
         <div class="time">
           <svg
-          class="car"
+            class="car"
             xmlns="http://www.w3.org/2000/svg"
             width="70"
             style="margin-right: 10px"

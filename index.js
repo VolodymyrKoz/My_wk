@@ -86,6 +86,14 @@ themeSwitch.addEventListener("change", () => {
   }
 });
 
+const scrollButton = document.getElementById("scrollButton");
 
+scrollButton.addEventListener("click", () => {
+  // Scroll to the top of the page smoothly
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 
 
