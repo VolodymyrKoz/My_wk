@@ -254,6 +254,12 @@ li {
   background-image: url(./img/Img_Overlay.png), url(./img/truck-contact.jpg);
   border-radius: 20px;
 }
+.hero-hiring{
+  max-width: 1280px;
+  background-image: url(./img/Img_Overlay.png), url(./img/hiring.jpg);
+  border-radius: 20px;
+
+}
 
 .hero-content {
   padding: 20px;
