@@ -256,7 +256,7 @@ li {
 }
 .hero-hiring{
   max-width: 1280px;
-  background-image: url(./img/Img_Overlay.png), url(./img/hiring.jpg);
+  background-image: url(./img/Img_Overlay.png), url(./img/hiring1.jpg);
   border-radius: 20px;
 
 }
@@ -829,6 +829,10 @@ textarea {
       url(./img/truck-her0-tablet-transportation.jpg);
     border-radius: 20px;
   }
+  .hero-hiring{
+    background-image: url(./img/Img_Overlay.png),
+    url(./img/hiring-tablet.jpg);
+  }
   .section1-title {
     font-size: x-large;
   }
@@ -853,7 +857,10 @@ textarea {
     display: block;
     cursor: pointer;
   }
-
+  .hero-hiring{
+    background-image: url(./img/Img_Overlay.png),
+    url(./img/hiring-mobile.jpg);
+  }
   .menu-icon {
     display: block;
     width: 25px;
