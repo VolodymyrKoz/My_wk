@@ -97,3 +97,14 @@ scrollButton.addEventListener("click", () => {
 });
 
 
+document.addEventListener("click", function (event) {
+  var menu = document.getElementById("mobile-menu");
+  var toggle = document.getElementById("mobile-menu-toggle");
+
+  if (menu.contains(event.target) || toggle.contains(event.target)) {
+    // Clicked inside the menu or on the toggle button, do nothing
+  } else {
+    // Clicked outside the menu, close it
+    toggle.checked = false;
+  }
+});
