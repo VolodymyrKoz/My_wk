@@ -226,16 +226,19 @@ li {
   background-color: #000a3e;
   border-radius: 5px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .footer-text {
   width: 400px;
   margin: 0;
+  display: block; /* Default display for larger screens */
 }
 .footer-logo {
   width: 100px;
   transition: all 0.5s ease;
+  margin-left: 20px;
 
   &:hover {
     filter: drop-shadow(8px 5px 3px rgba(255, 255, 255, 0.5));
@@ -658,7 +661,7 @@ input:checked + .slider:before {
 }
 
 .values {
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -979,3 +982,156 @@ textarea {
     padding-bottom: 370px;
   }
 }
+
+.team-list {
+    display: flex;
+    justify-content: space-around; /* Default alignment for larger screens */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+.team-member {
+    text-align: center; /* Centers text under images */
+    margin: 10px; /* Adds space around each team member */
+}
+
+.team-image {
+    width: 100px; /* Set a fixed width for images */
+    height: 100px; /* Set a fixed height for images */
+    border-radius: 50%; /* Makes images circular */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+.form-select {
+    width: 100%; /* Full width to match other form elements */
+    padding: 10px; /* Adds padding for better spacing */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size to match other inputs */
+    font-family: 'Montserrat Alternates', sans-serif; /* Font family */
+    background-color: #fff; /* White background */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    color: #999; /* Placeholder color */
+}
+
+.form-select option {
+    color: #000; /* Text color for options */
+}
+
+.form-select:focus {
+    border-color: #000a3e; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: #000a3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media query for devices with a max width of 768px (tablets and phones) */
+@media (max-width: 1279px) {
+    .footer-text {
+        display: none; /* Hide footer text on smaller screens */
+    }
+}
+
+/* Media query for devices with a max width of 655px */
+@media (max-width: 654px) {
+    .footer {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .footer-logo {
+        margin-bottom: 10px; /* Add space below the logo */
+    }
+
+    .footer-text {
+        margin-bottom: 10px; /* Add space below the footer text */
+    }
+
+    .socialContainer {
+        margin: 5px; /* Add space around social media icons */
+    }
+}
+
+/* Media query for devices with a max width of 768px (tablets and phones) */
+@media (max-width: 768px) {
+    .team-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .team-member {
+        margin-bottom: 20px; /* Add space between team members */
+    }
+
+    .team-image {
+        width: 100px; /* Adjust image size for smaller screens */
+        height: 100px; /* Maintain aspect ratio */
+    }
+}
+
