@@ -110,49 +110,55 @@ document.addEventListener("click", function (event) {
 });
 
 function toggleMember(selectedMember) {
-    const members = document.querySelectorAll('.team-member');
-    const section = document.querySelector('.section1-about');
+  const members = document.querySelectorAll('.team-member');
+  const section = document.querySelector('.section1-about');
 
-    members.forEach(member => {
-        if (member !== selectedMember) {
-            member.classList.remove('expanded'); // Collapse other members
-            member.querySelector('.role-description').style.display = 'none'; // Hide other descriptions
-            member.querySelector('.clickable-indicator').style.display = 'block'; // Show subtext for collapsed members
-        }
-    });
+  members.forEach(member => {
+      if (member !== selectedMember) {
+          member.classList.remove('expanded'); // Collapse other members
+          member.querySelector('.role-description').style.display = 'none'; // Hide other role descriptions
+          member.querySelector('.value-description').style.display = 'none'; // Hide other value descriptions
+          member.querySelector('.clickable-indicator').style.opacity = '1'; // Show subtext for collapsed members
+      }
+  });
 
-    const description = selectedMember.querySelector('.role-description');
-    const indicator = selectedMember.querySelector('.clickable-indicator');
-    selectedMember.classList.toggle('expanded'); // Toggle the selected member
+  const roleDescription = selectedMember.querySelector('.role-description');
+  const valueDescription = selectedMember.querySelector('.value-description');
+  selectedMember.classList.toggle('expanded'); // Toggle the selected member
 
-    if (selectedMember.classList.contains('expanded')) {
-        section.classList.add('expanded'); // Expand the section
-        description.style.display = 'block'; // Show the description
-        indicator.style.display = 'none'; // Hide the subtext
-        typeWriter(description); // Start typing effect
-    } else {
-        description.style.display = 'none'; // Hide the description if collapsed
-        indicator.style.display = 'block'; // Show the subtext again
-        section.classList.remove('expanded'); // Collapse the section
-    }
+  if (selectedMember.classList.contains('expanded')) {
+      section.classList.add('expanded'); // Expand the section
+      typeWriter(roleDescription, () => {
+          typeWriter(valueDescription); // Start typing effect for value description after role description
+      });
+      selectedMember.querySelector('.clickable-indicator').style.opacity = '0'; // Hide the subtext
+  } else {
+      roleDescription.style.display = 'none'; // Hide the role description if collapsed
+      valueDescription.style.display = 'none'; // Hide the value description if collapsed
+      selectedMember.querySelector('.clickable-indicator').style.opacity = '1'; // Show the subtext again
+      section.classList.remove('expanded'); // Collapse the section
+  }
 }
 
-function typeWriter(element) {
-    const text = element.textContent;
-    element.textContent = ''; // Clear the text
-    let i = 0;
+// Function to create a typing effect
+function typeWriter(element, callback) {
+  const text = element.textContent;
+  element.textContent = ''; // Clear the text
+  let i = 0;
 
-    function typing() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(typing, 50); // Adjust typing speed here
-        }
-    }
+  function typing() {
+      if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(typing, 45); // Adjust typing speed here
+      } else if (callback) {
+          callback(); // Call the callback function when done
+      }
+  }
 
-    typing();
+  element.style.display = 'block'; // Ensure the element is displayed before typing
+  typing();
 }
-
 // Remove the event listener for the hologram
 // document.getElementById('texas-hologram').addEventListener('click', function() {
 //     const hologram = document.getElementById('hologram');
