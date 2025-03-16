@@ -108,3 +108,66 @@ document.addEventListener("click", function (event) {
     toggle.checked = false;
   }
 });
+
+function toggleMember(selectedMember) {
+    const members = document.querySelectorAll('.team-member');
+    const section = document.querySelector('.section1-about');
+
+    members.forEach(member => {
+        if (member !== selectedMember) {
+            member.classList.remove('expanded'); // Collapse other members
+            member.querySelector('.role-description').style.display = 'none'; // Hide other descriptions
+            member.querySelector('.clickable-indicator').style.display = 'block'; // Show subtext for collapsed members
+        }
+    });
+
+    const description = selectedMember.querySelector('.role-description');
+    const indicator = selectedMember.querySelector('.clickable-indicator');
+    selectedMember.classList.toggle('expanded'); // Toggle the selected member
+
+    if (selectedMember.classList.contains('expanded')) {
+        section.classList.add('expanded'); // Expand the section
+        description.style.display = 'block'; // Show the description
+        indicator.style.display = 'none'; // Hide the subtext
+        typeWriter(description); // Start typing effect
+    } else {
+        description.style.display = 'none'; // Hide the description if collapsed
+        indicator.style.display = 'block'; // Show the subtext again
+        section.classList.remove('expanded'); // Collapse the section
+    }
+}
+
+function typeWriter(element) {
+    const text = element.textContent;
+    element.textContent = ''; // Clear the text
+    let i = 0;
+
+    function typing() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(typing, 50); // Adjust typing speed here
+        }
+    }
+
+    typing();
+}
+
+// Remove the event listener for the hologram
+// document.getElementById('texas-hologram').addEventListener('click', function() {
+//     const hologram = document.getElementById('hologram');
+//     hologram.classList.add('show'); // Show the hologram
+
+//     // Trigger confetti effect
+//     shootConfetti(hologram);
+
+//     // Hide the hologram after 2 seconds
+//     setTimeout(() => {
+//         hologram.classList.remove('show'); // Remove the show class to hide it
+//     }, 2000);
+// });
+
+// Remove the shootConfetti function
+// function shootConfetti(hologram) {
+//     // Remove all confetti-related code
+// }

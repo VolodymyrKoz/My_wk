@@ -985,20 +985,59 @@ textarea {
 
 .team-list {
     display: flex;
-    justify-content: space-around; /* Default alignment for larger screens */
-    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .team-member {
-    text-align: center; /* Centers text under images */
-    margin: 10px; /* Adds space around each team member */
+    cursor: pointer; /* Change cursor to pointer for clickable items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for size and shadow */
+    margin: 10px;
+    text-align: center; /* Center text */
+    border: 2px solid transparent; /* Add a border for smooth scaling */
+    border-radius: 10px; /* Slightly rounded corners for the member container */
+    padding: 15px; /* Add padding inside the member box */
+    overflow: hidden; /* Prevent overflow when collapsing */
+}
+
+/* Hover effect */
+.team-member:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 .team-image {
-    width: 100px; /* Set a fixed width for images */
-    height: 100px; /* Set a fixed height for images */
-    border-radius: 50%; /* Makes images circular */
-    object-fit: cover; /* Ensures images cover the area without distortion */
+    width: 100px; /* Default image size */
+    height: 100px; /* Set height to match width for circular shape */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+.role-description {
+    font-size: 14px; /* Adjust font size as needed */
+    color: #555; /* Change text color for better readability */
+    margin-top: 5px; /* Add space above the description */
+    opacity: 0; /* Start with opacity 0 for smooth fade-in */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+/* Expanded state styles */
+.team-member.expanded {
+    flex: 2; /* Make expanded member larger */
+    border: 2px solid #000a3e; /* Highlight border when expanded */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add a deeper shadow for depth */
+}
+
+.team-member.expanded .team-image {
+    transform: scale(1.2); /* Scale up the image slightly */
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+.team-member.expanded .role-description {
+    display: block; /* Show the role description when expanded */
+    opacity: 1; /* Fade in the description */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
 }
 
 .form-select {
@@ -1135,3 +1174,46 @@ textarea {
     }
 }
 
+.history p {
+    line-height: 1.6; /* Improve readability */
+}
+
+.history strong {
+    color: #000a3e; /* Change color for emphasis */
+    font-size: 1.1em; /* Slightly increase font size */
+}
+
+.section1-about {
+    transition: max-height 0.5s ease; /* Smooth transition for height */
+    overflow: hidden; /* Prevent overflow when collapsing */
+}
+
+/* Add a class to control the expanded state */
+.section1-about.expanded {
+    max-height: 1000px; /* Set a large enough max-height to accommodate expanded content */
+}
+
+.clickable-indicator {
+    font-size: 0.8em; /* Smaller font size for subtext */
+    color: #007BFF; /* Use a professional color, like a blue */
+    margin-top: 5px; /* Space above the subtext */
+    margin-bottom: 10px; /* Space below the subtext */
+    transition: display 0.3s ease; /* Smooth transition for hiding */
+}
+
+/* Hide the clickable indicator when the member is expanded */
+.team-member.expanded .clickable-indicator {
+    display: none; /* Completely hide the subtext */
+}
+
+.values {
+    width: 100%; /* Set the width to 100% */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Optional: Ensure consistent styling with other sections */
+section {
+    max-width: 1200px; /* Set a max width if needed */
+    margin: 0 auto; /* Center the section */
+}
