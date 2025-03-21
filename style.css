@@ -1064,7 +1064,7 @@ textarea {
 .card {
   width: fit-content;
   height: fit-content;
-  background-color: #000a3e;
+  /* background-color: #000a3e; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1072,7 +1072,6 @@ textarea {
   gap: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
-
 /* for all social containers*/
 .socialContainer {
   width: 52px;

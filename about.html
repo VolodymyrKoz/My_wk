@@ -69,7 +69,7 @@
     </header>
 
     <!--Hero-->
-    <section class="hero-about">
+    <section class="hero-about" data-aos="fade-down">
       <div class="hero-content">
         <h1 class="hero-title">About Us</h1>
         <p class="hero-text">
@@ -78,12 +78,12 @@
       </div>
     </section>
   <div class="section1-about">
-    <section class="missions" id="mission">
+    <section class="missions" id="mission" data-aos="fade-up" data-aos-delay="100">
       <h2>Our Mission</h2>
       <p>At ArtWays Corporation, our mission is to provide reliable and efficient trucking services to our clients while maintaining the highest standards of professionalism, safety, and customer satisfaction. We aim to be a trusted partner for all your transportation needs, delivering your goods on time and in perfect condition.</p>
     </section>
   
-    <section class="history" id="history">
+    <section class="history" id="history" data-aos="fade-up" data-aos-delay="200">
       <h2>Our History</h2>
       <p>
         ArtWays Corporation was proudly based and founded in <strong>TEXAS</strong>, in 2022 with a vision to revolutionize the trucking industry. Over the past years, we have grown into a leading transportation company, serving a diverse range of industries across the country. Our commitment to quality, integrity, and innovation has allowed us to build long-term relationships with our clients and establish ourselves as a reliable name in the industry.
@@ -92,9 +92,9 @@
   </div>
   
   
-<section class="team" id="team">
+<section class="team" id="team" data-aos="fade-up" data-aos-delay="100">
   <div class="ceo">
-    <div class="ceo-content">
+    <div class="ceo-content" data-aos="fade-right" data-aos-delay="200">
       <h2>Our CEO</h2>
       <p>At the helm of ArtWays Corporation stands our esteemed CEO, a beacon of leadership and innovation in the transportation and logistics sector. With a remarkable track record of success, our CEO brings a unique blend of strategic insight and industry expertise to guide the company towards new horizons.
       </p>
@@ -106,31 +106,31 @@
       </p>
     </div>
   </div>
-  <img class="img" src="./img/ceo.jpg" />
+  <img class="img" src="./img/ceo.jpg" data-aos="fade-left" data-aos-delay="300" />
 </section>
 <div class="section1-about">
-  <section>
+  <section data-aos="fade-up">
     <h2>Our Team</h2>
     <div class="team-list">
-        <div class="team-member" onclick="toggleMember(this)">
+        <div class="team-member" onclick="toggleMember(this)" data-aos="fade-up" data-aos-delay="100">
             <img src="img/safety-man.jpeg" alt="Safety Manager" class="team-image" />
             <h3>Safety Manager</h3>
             <p class="clickable-indicator">(Click to Expand)</p>
             <p class="combined-description" style="display: none;">Ensures compliance with safety regulations and promotes a culture of safety within the organization. Values a safe working environment and believes in proactive measures to prevent accidents.</p>
         </div>
-        <div class="team-member" onclick="toggleMember(this)">
+        <div class="team-member" onclick="toggleMember(this)" data-aos="fade-up" data-aos-delay="200">
             <img src="img/logictics.jpeg" alt="Logistic Coordinator" class="team-image" />
             <h3>Logistic Coordinator</h3>
             <p class="clickable-indicator">(Click to Expand)</p>
             <p class="combined-description" style="display: none;">Manages logistics operations, ensuring timely delivery and efficient supply chain management. Values efficiency and organization, striving to optimize processes for better service delivery.</p>
         </div>
-        <div class="team-member" onclick="toggleMember(this)">
+        <div class="team-member" onclick="toggleMember(this)" data-aos="fade-up" data-aos-delay="300">
             <img src="img/account-manager.jpeg" alt="Account Manager" class="team-image" />
             <h3>Account Manager</h3>
             <p class="clickable-indicator">(Click to Expand)</p>
             <p class="combined-description" style="display: none;">Builds and maintains client relationships, ensuring customer satisfaction and retention. Values strong relationships and communication, focusing on understanding client needs.</p>
         </div>
-        <div class="team-member" onclick="toggleMember(this)">
+        <div class="team-member" onclick="toggleMember(this)" data-aos="fade-up" data-aos-delay="400">
             <img src="img/it-specialist.jpeg" alt="IT Specialist" class="team-image" />
             <h3>IT Specialist</h3>
             <p class="clickable-indicator">(Click to Expand)</p>
@@ -141,19 +141,19 @@
 </div>
 
   
-  <section class="values" id="values">
+  <section class="values" id="values" data-aos="fade-up" data-aos-delay="100">
     <h2>Our Values</h2>
     <p>As a company, we are driven by a set of core values that guide our actions and decisions:</p>
     <ul>
-      <li>Reliability: We deliver on our promises and consistently provide dependable services.</li>
-      <li>Safety: We prioritize the safety of our team, your cargo, and the communities we operate in.</li>
-      <li>Customer Focus: We are committed to understanding and meeting the unique needs of our clients.</li>
-      <li>Integrity: We conduct ourselves with honesty, transparency, and ethical business practices.</li>
-      <li>Continuous Improvement: We strive for excellence by continuously seeking ways to enhance our services and operations.</li>
+      <li data-aos="fade-up" data-aos-delay="150">Reliability: We deliver on our promises and consistently provide dependable services.</li>
+      <li data-aos="fade-up" data-aos-delay="200">Safety: We prioritize the safety of our team, your cargo, and the communities we operate in.</li>
+      <li data-aos="fade-up" data-aos-delay="250">Customer Focus: We are committed to understanding and meeting the unique needs of our clients.</li>
+      <li data-aos="fade-up" data-aos-delay="300">Integrity: We conduct ourselves with honesty, transparency, and ethical business practices.</li>
+      <li data-aos="fade-up" data-aos-delay="350">Continuous Improvement: We strive for excellence by continuously seeking ways to enhance our services and operations.</li>
     </ul>
   </section>
     </section>
-    <footer class="footer">
+    <footer class="footer" data-aos="fade" data-aos-delay="50">
       <a href="index.html"><img class="footer-logo" src="img/logo-dark.png" alt="logo" height="62.29px" /></a>
       <p class="footer-text">
           ArtWays Corporation is your top-notch solution for all your transportation
@@ -183,6 +183,7 @@
     
   </footer>
     </body>
-  <script src="index.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="universal.js"></script>
+  <script src="index.js"></script>
 </html>
