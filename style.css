@@ -1216,3 +1216,15 @@ section {
     max-width: 1200px; /* Set a max width if needed */
     margin: 0 auto; /* Center the section */
 }
+
+/* Add these styles for dark theme select elements */
+body.dark-theme .form-select {
+    background-color: #000000;
+    color: white;
+    border-color: #666;
+}
+
+body.dark-theme .form-select option {
+    background-color: #000000;
+    color: white;
+}

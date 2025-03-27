@@ -110,7 +110,7 @@
     <input type="email" id="email" name="email" placeholder="email@examplle.com" required><br><br>
     
     <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone" placeholder="(123)456 7890"><br><br>
+    <input type="tel" id="phone" name="phone" placeholder="(123)456 7890" pattern="^[\d]{10}$" inputmode="numeric" required><br><br>
 
     <label for="experience">Experience:</label>
     <select id="experience" name="experience" class="form-select">
@@ -216,6 +216,18 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="universal.js"></script>
 <script src="index.js"></script>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    const phoneInput = document.getElementById('phone');
+    const phoneNumber = phoneInput.value.replace(/\D/g, ''); // Remove all non-digits
+    
+    if (phoneNumber.length !== 10) {
+        e.preventDefault(); // Prevent form submission
+        alert('Please enter a valid 10-digit phone number');
+        phoneInput.focus();
+    }
+});
+</script>
 </body>
 
 </html>
